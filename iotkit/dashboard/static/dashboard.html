@@ -318,17 +318,17 @@ joystick.stop = function() {
             <div class="navbar-collapse collapse navbar-inverse-collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">{{!nodes.length}} {{!nodes.length>=2 ? 'nodes' : 'node'}} monitored
+                        <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{! nodes.length }} {{! nodes.length>=2 ? 'nodes' : 'node' }} monitored
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li v-for="(node, index) in nodes">
-         
                                 <a :href="'#node'+index">
                                     <div class="checkbox" style="display: inline; margin-right: 5px;" @click.stop @change="Vue.nextTick(refresh_layout)">
-                                      <label>
-                                        <input type="checkbox" v-model="node.visible"> 
-                                      </label>
+                                        <label>
+                                            <input type="checkbox" v-model="node.visible"> 
+                                        </label>
                                     </div> 
                                     {{! node.displayName() }}
                                 </a>
